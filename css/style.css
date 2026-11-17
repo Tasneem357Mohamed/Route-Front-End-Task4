@@ -1,3 +1,7 @@
+*
+{
+    box-sizing: border-box;
+}
 @font-face
 {
     font-family: "IBMPlexSansArabic";
@@ -31,12 +35,10 @@
 
 
 
-
 body
 {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
     direction: rtl;
     font-family: "IBMPlexSansArabic";
 }
@@ -57,7 +59,7 @@ div.side-bar
     right: 0;
     top: 0;
     bottom: 0;
-    width: 17%;
+    width: 20%;
     padding: 30px 20px;
     border-left:2px solid #e5e7eb;
     box-shadow: -1px 0 7px 0px #e5e7eb;
@@ -93,7 +95,7 @@ i.fa-coins
     color: white;
     font-size: 20px;
 }
-h1.logo-text-header , span.logo-text-description
+h1.logo-text-header 
 {
     padding: 0;
     margin: 0;
@@ -111,6 +113,7 @@ span.logo-text-description
     font-size: 14px;
     font-weight: 800;
     line-height: 24px;
+    align-self: flex-start;
 }
 div.side-bar-links
 {
@@ -337,8 +340,6 @@ img.user-image
 span.user-name , span.account-type
 {
     font-weight: 800;
-    padding: 0;
-    margin: 0;
 }
 span.user-name
 {
@@ -363,7 +364,6 @@ div.second-group
 }
 span.money-title
 {
-    margin: 0;
     font-size: 16px;
     font-weight: 800;
     color: #6A7282;
@@ -502,7 +502,6 @@ h4.activity-title
 span.activity-type
 {
     font-size: 12px;
-    margin: 0;
     font-weight: 500;
 }
 span.activity-type.blue
@@ -522,6 +521,7 @@ p.activity-description
 }
 span.activity-time
 {
+    display:inline-block;
     font-size: 12px;
     font-weight: 800;
     margin-top: 10px;
@@ -578,7 +578,7 @@ h2.header-title
 }
 button.header-button
 {
-    
+    padding: 0;
     margin: 0;
     border: none;
     background-color: transparent;
@@ -817,10 +817,6 @@ div.category-details
     font-weight: 800;
     border-radius: 120px;
 }
-span.category-name
-{
-    margin: 0;
-}
 div.category-details.category-1
 {
     background-color: #DCFCE7 ;
@@ -874,6 +870,7 @@ span.history
 }
 span.status
 {
+    display:inline-block;
     font-size: 12px;
     font-weight: 500;
     padding: 2px 10px;
@@ -1070,7 +1067,6 @@ h3.percentage-name
 }
 span.percentage-desc
 {
-    margin: 0;
     font-size: 12px;
     font-weight: 800;
     color: #6A7282;
@@ -1088,9 +1084,9 @@ h4.percentage-remain-price
 }
 span.percentage-remain-number
 {
+    display:inline-block;
     font-size: 12px;
     font-weight: 500;
-    margin: 0;
     padding: 2px 8px;
     border-radius: 120px;
 }
@@ -1318,11 +1314,12 @@ h3.account-text-header
 {
     font-size: 16px;
     font-weight: 500;
-    line-height: 15px;
+    line-height: 21px;
 }
 span.account-desc
 {
-    margin: 0;
+    line-height: 15px;
+    display: inline-block;
     font-size: 12px;
     font-weight: 800;
     color: #6A7282;
@@ -1403,7 +1400,7 @@ div.method-card-content
     border-radius: 12px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     color: white;
     transform: rotateY(0deg);
 }
@@ -1411,21 +1408,22 @@ span.main-sign
 {
     position: absolute;
     top: 12px;
-    left: 50px;
+    left: 10px;
     background-color: rgba(255, 255, 255 , 0.05);
     box-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.05);
+    display: inline-block;
     padding: 4px 12px;
     border-radius: 120px;
     font-size: 12px;
     font-weight: 800;
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 div.method-header
 {
     margin-top: 10px;
-    width: calc(100% - 45px);
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1476,13 +1474,14 @@ i.method-image
 div.circles-container
 {
     margin-top: 30px;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
 }
 div.circles-group
 {
-    margin-inline-end: 20px;
     display: flex;
     gap: 4px;
 }
@@ -1495,12 +1494,13 @@ div.circle
 }
 h3.method-main-text
 {
-    margin: 10px 0 0 0  ;
+    width: 50%;
+    margin: 0;
     align-self: start;
 }
 div.method-footer
 {
-    width: calc(100% - 45px);
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -1603,6 +1603,7 @@ span.cvv-text
 }
 span.cvv-number
 {
+    display:inline-block;
     padding: 3px 15px;
     border-radius: 8px;
     background-color: #FFFFFF;
@@ -1620,8 +1621,8 @@ div.card-container:hover .method-card
 {
     div.side-bar
     {
-        width: 5%;
-        padding: 15px 15px;
+        width: 10%;
+        padding: 15px 5px;
         align-items: center;
         overflow: hidden;
     }
@@ -1645,7 +1646,7 @@ div.card-container:hover .method-card
     }
     div.page-content
     {
-        margin-right: 8%;
+        margin-right: 10%;
         width: 92%;
         display: grid;
         grid-template-columns: repeat(6 , minmax(0 , 1fr));
@@ -1693,7 +1694,7 @@ div.card-container:hover .method-card
     div.bar-graph-container
     {
         justify-self: center;
-        gap: 80px;
+        gap: 70px;
         margin-top: 70px;
     }
     div.last-transactions
@@ -1742,13 +1743,10 @@ div.card-container:hover .method-card
         grid-row: 72 / 99;
         grid-column: 4 / 7;
     }
-    div.circles-container
-    {
-        align-items: center;
-    }
     h3.method-main-text
     {
         margin-top: 0;
+        width: 20%;
     }
 }
 @media screen and (max-width:992px) 
@@ -1813,11 +1811,11 @@ div.card-container:hover .method-card
     }
     div.account-summary
     {
-        grid-row: 78 / 101;
+        grid-row: 78 / 102;
     }
     div.budget-overview
     {
-        grid-row: 101 / 102;
+        grid-row: 102 / 103;
     }
     div.percentage-header , div.budget-total-header
     {
@@ -1825,7 +1823,7 @@ div.card-container:hover .method-card
     }
     div.payment-methods
     {
-        grid-row: 101 / 102;
+        grid-row: 102 / 103;
     }
     div.circles-container
     {
@@ -1956,7 +1954,7 @@ div.card-container:hover .method-card
     div.page-content
     {
         margin-right: 0;
-        padding: 20px 10px;
+        padding: 20px 20px;
         width: 100%;
         display: grid;
         grid-template-columns: 100%;
@@ -1993,7 +1991,7 @@ div.card-container:hover .method-card
     }
     div.header-left-part
     {
-        width: calc(100% + 30px);
+        width: 100%;
         align-self: center;
         justify-content: space-between;
     }
@@ -2030,21 +2028,21 @@ div.card-container:hover .method-card
     div.activities
     {
         grid-column: 1 / 2;
-        grid-row: 37 / 57;
+        grid-row: 37 / 58;
     }
     div.last-transactions
     {
         grid-column: 1 / 2;
-        grid-row: 57 / 101;
+        grid-row: 58 / 102;
     }
     div.bills
     {
         grid-column: 1 / 2;
-        grid-row: 101 / 123;
+        grid-row: 102 / 124;
     }
     div.budget-overview
     {
-        grid-row: 123 / 174;
+        grid-row: 124 / 176;
         grid-column: 1 / 2;
     }
     div.percentage-header , div.budget-total-header
@@ -2054,21 +2052,21 @@ div.card-container:hover .method-card
     div.income-vs-payments
     {
         grid-column: 1 / 2;
-        grid-row: 174 / 192;
+        grid-row: 176 / 194;
     }
     div.bar-graph-container
     {
-        gap: 20px;
+        gap: 15px;
         margin-top: 50px;
     }
     div.account-summary
     {
         grid-column: 1 / 2;
-        grid-row: 192 / 214;
+        grid-row: 194 / 217;
     }
     div.payment-methods
     {
-        grid-row: 214 / 255;
+        grid-row: 217 / 259;
         grid-column: 1 / 2;
     }
 }
